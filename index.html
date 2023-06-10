@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,23 +8,35 @@
     <title>Compra de pasajes en linea</title>
     <link rel="stylesheet" href="./estilos.css" />
     <script src=""></script>
-    <script src="./alerts.js"></script>
-    
-    <script src="./funciones.js"></script>
-    <img src="./flying-airplane-silhouette-design-free-vector.jpg" alt="">
-   
-    
+    <script src=""></script>
+    <script src=""></script>
+    <img src="./flying-airplane-silhouette-design-free-vector.jpg" alt="" />
   </head>
   <body>
-     <script>
-     document.write("<h1>Compra de pasaportes</h1>");
-      document.write("<h6>Recuerde cumplir con los requisitos correspondientes</h6>");
-      
-    </script>
-    <label for="terminos-y-condiciones">
-					<input type="checkbox" id="terminos-y-condiciones" name="terminos-y-condiciones" />
-					Aceptar terminos y condiciones
-				</label>
-    <button onclick="ingresar()">Comprar</button>
+    <div class="contenedor">
+      <form id="formulario" action="" method="">
+        <input type="text" name="mailName" id="mail00" placeholder="direccion@mail.com" />
+        <input type="text" name="contraseñaName" id="contraseña" placeholder="contraseña" />
+        <select name="paisName" id="pais">
+          <option selected disabled value="">Selecciona tu ubicacion</option>
+          <option value="mexico">México</option>
+          <option value="brasil">Brasil</option>
+          <option value="argentina">Argentina</option>
+        </select>
+        <input type="date" name="fecha" id="fecha" />
+        <label for="terminos-y-condiciones">
+          <input type="checkbox" id="terminos-y-condiciones" name="terminos-y-condiciones"
+          />
+          Aceptar terminos y condiciones
+        </label>
+        <button id="ingresar()">Ingresar</button>
+        <div class="forgot">
+          <a href="#">Crear usuario</a>
+        </div>
+        <div class="forgot">
+          <a href="#">Olvidaste tu contraseña?</a>
+        </div>
+      </form>
+    </div>
   </body>
 </html>

@@ -7,8 +7,8 @@ function completarDatos(){
     
    
     
-    while (dni.length < 6){
-        dni=prompt('Ingrese un Dni valido');
+    while (dni < 6){
+        dni=prompt('Ingrese un DNI valido');
     }
     
     
@@ -32,6 +32,11 @@ function completarDatos(){
            parseFloat(prompt('Ingresar el precio neto de su pasaje: '));
            let precioConIva= precioNeto *1.21;
            console.log(`El precio final de su pasaje es de $ ${precioConIva}`);
+
+
+
+        
+        
         }
     
       
