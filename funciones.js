@@ -40,6 +40,4 @@ function completarDatos(){
         }
     
       
-        
-    
     completarDatos();
