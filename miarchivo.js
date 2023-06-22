@@ -33,4 +33,18 @@ const vTotal =(parametro1, parametro2, parametro3) =>{
 }
 vTotal ('suma345', 15,9);
 vTotal ('resta345', 15,7);
+ 
+//Evento 
 
+const btnA = document.getElementById('btn-agregar');
+const btnB = document.getElementById('btn-agregar2');
+
+
+btnA.addEventListener('click', ()=>{
+    alert('Diculpe las molestias ocasionadas, la pagina esta en pleno desarrollo');
+   });
+
+   btnB.addEventListener('click', ()=>{
+    alert('Dsiculpe las molestias, estamos trabajando para que pueda acceder');
+   });
+   
