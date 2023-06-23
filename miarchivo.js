@@ -36,15 +36,11 @@ vTotal ('resta345', 15,7);
  
 //Evento 
 
-const btnA = document.getElementById('btn-agregar');
-const btnB = document.getElementById('btn-agregar2');
+const boton =
+document.querySelectorAll('.btn-agregar');
 
-
-btnA.addEventListener('click', ()=>{
-    alert('Diculpe las molestias ocasionadas, la pagina esta en pleno desarrollo');
-   });
-
-   btnB.addEventListener('click', ()=>{
-    alert('Dsiculpe las molestias, estamos trabajando para que pueda acceder');
-   });
-   
+boton.forEach(boton02=>{
+ boton02.addEventListener('click', ()=>{
+    console.log('Aun no hemos terminado con esta funcionalidad, disculpe las molestias');
+ });
+});
