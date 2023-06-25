@@ -23,16 +23,16 @@ K1.forEach((A)=>
 //Condicional
 
 const vTotal =(parametro1, parametro2, parametro3) =>{
-    if (parametro1 === 'suma345'){
+    if (parametro1 === 'ifSuma'){
         console.log(`Cupos de descuentos para viajar en primera línea  ${parametro2+parametro3}`);
-    }else if (parametro1=== 'resta345'){
+    }else if (parametro1=== 'elseIfresta'){
         console.log(`Cupos de descuentos para viajar en segunda línea ${parametro2-parametro3}`)
     }
  
     
 }
-vTotal ('suma345', 15,9);
-vTotal ('resta345', 15,7);
+vTotal ('ifSuma', 15,9);
+vTotal ('elseIfresta', 15,7);
  
 //Evento 
 
@@ -44,3 +44,4 @@ boton.forEach(boton02=>{
     console.log('Aun no hemos terminado con esta funcionalidad, disculpe las molestias');
  });
 });
+
