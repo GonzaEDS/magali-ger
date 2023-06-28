@@ -45,3 +45,14 @@ boton.forEach(boton02=>{
  });
 });
 
+
+const input = document.getElementById('contraseña');
+
+input.addEventListener("blur", (e) =>{
+    console.log('saliste de foco')
+});
+
+ const mail = document.getElementById('mail00');
+mail.addEventListener("blur", (e) =>{
+    console.log('saliste de foco')
+});
