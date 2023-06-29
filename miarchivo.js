@@ -52,7 +52,14 @@ input.addEventListener("blur", (e) =>{
     console.log('saliste de foco')
 });
 
- const mail = document.getElementById('mail00');
-mail.addEventListener("blur", (e) =>{
-    console.log('saliste de foco')
-});
+const select = document.getElementById('pais');
+select.addEventListener('change', ()=>{
+    const opcionSeleccionada =select.value;
+    console.log('Seleccionaste: '+ opcionSeleccionada);
+})
+
+
+
+
+
+
