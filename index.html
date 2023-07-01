@@ -8,14 +8,15 @@
     <title>Compra de pasajes en linea</title>
     <link rel="stylesheet" href="./estilos.css" />
     <script src="./alerts.js"></script>
-   
+   <style>.rojo{
+    border: 1px solid red;}</style>
     <img src="./flying-airplane-silhouette-design-free-vector.jpg" alt="" />
   </head>
   <body>
-    <div class="contenedor">
+    <div class="contenedor"id="formulario">
       <form id="formulario" action="" method="">
-        <input type="text" name="mailName" id="mail00" placeholder="direccion@mail.com" />
-        <input type="text" name="contraseñaName" id="contraseña" placeholder="contraseña" />
+        <input type="text" class="mail" name="mail" id="mail" placeholder="direccion@mail.com" />
+        <input type="text" name="contraseña" id="contraseña" placeholder="contraseña" />
         <select name="paisName" id="pais">
           <option selected disabled value="">Selecciona tu ubicacion</option>
           <option value="mexico">México</option>

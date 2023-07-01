@@ -59,6 +59,35 @@ select.addEventListener('change', ()=>{
 })
 
 
+const mail00 = document.querySelector('#mail');
+const contraseña00 =document.querySelector('#contraseña');
+const formulario = document.querySelector('#formulario');
+
+formulario.addEventListener('submit', function(evento){
+    evento.preventDefault();
+if(mail00.value ===''){
+    mail00.classList.add('rojo');
+}else{
+    mail00.classList.remove('rojo');
+    validarCorreo();
+}   
+});
+
+formulario.addEventListener('submit', function(evento){
+    evento.preventDefault();
+if(contraseña00.value ===''){
+    contraseña00.classList.add('rojo');
+}else{
+    contraseña00.classList.remove('rojo');
+    validarContraseña();
+}   
+});
+
+
+
+
+
+
 
 
 
