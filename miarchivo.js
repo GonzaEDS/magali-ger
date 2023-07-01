@@ -73,6 +73,15 @@ if(mail00.value ===''){
 }   
 });
 
+function validarCorreo(){
+    const input00 = document.querySelector('#mail');
+    const correo = input00.value;
+    const expReg =/^[a-zA-Z0-9\_\- ]{4,30}$/;
+    if(!expReg.test(correo)){
+        input00.classList.add('--error');
+    }
+}
+
 formulario.addEventListener('submit', function(evento){
     evento.preventDefault();
 if(contraseña00.value ===''){
@@ -83,8 +92,14 @@ if(contraseña00.value ===''){
 }   
 });
 
-
-
+function validarContraseña(){
+    const input000 = document.querySelector('#contraseña');
+    const contraseña00 = input000.value;
+    const expReg =/^\d+(\.\d+)?$/;
+    if(!expReg.test(contraseña00)){
+        contraseña00.classList.add('--error');
+    }
+}
 
 
 
