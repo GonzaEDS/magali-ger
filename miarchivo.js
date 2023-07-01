@@ -70,6 +70,7 @@ if(mail00.value ===''){
 }else{
     mail00.classList.remove('rojo');
     validarCorreo();
+   mail00.value='';
 }   
 });
 
@@ -89,6 +90,7 @@ if(contraseña00.value ===''){
 }else{
     contraseña00.classList.remove('rojo');
     validarContraseña();
+    contraseña00.value='';
 }   
 });
 
