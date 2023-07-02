@@ -128,7 +128,7 @@ function validarPais(){
 formulario.addEventListener('submit', function(e){
     e.preventDefault();
 if(fecha00.value ===''){
-    mail00.classList.add('rojo');
+    fecha00.classList.add('rojo');
 }else{
     fecha00.classList.remove('rojo');
     validarFecha();
@@ -146,7 +146,7 @@ formulario.addEventListener('submit', function(e){
     e.preventDefault();
 if(validarCorreo() && validarContraseña() && validarPais() && validarFecha()){
     const nuevoReg ={
-      id: 1,
+        id: '1',
       fecha: new Date(),
       correo: mail00.value,
       contraseña: mail00.value,

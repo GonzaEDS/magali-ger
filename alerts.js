@@ -10,3 +10,6 @@ const ingresar00=()=>{
 };
 
 
+const crearUsuario=()=>{
+    alert('Lo sentimos, aun no hemos desarrolado esta funcion.')
+}
