@@ -58,9 +58,16 @@ select.addEventListener('change', ()=>{
     console.log('Seleccionaste: '+ opcionSeleccionada);
 })
 
+
+
+
+
 const formulario = document.querySelector('#formulario');
 const mail00 = document.querySelector('#mail');
 const contraseña00 =document.querySelector('#contraseña');
+const pais00 = document.querySelector('#pais');
+const fecha00 =document.querySelector('#fecha');
+const terminos00 =document.querySelector('#terminos');
 
 
 formulario.addEventListener('submit', function(evento){
@@ -82,14 +89,6 @@ function validarCorreo(){
         input00.classList.add('--error');
     }
 }
-function validarContraseña(){
-    const input000 = document.querySelector('#contraseña');
-    const contraseña00 = input000.value;
-    const expReg =/^\d+(\.\d+)?$/;
-    if(!expReg.test(contraseña00)){
-        contraseña00.classList.add('--error');
-    }
-}
 
 formulario.addEventListener('submit', function(evento){
     evento.preventDefault();
@@ -102,16 +101,57 @@ if(contraseña00.value ===''){
 } 
 });
 
+function validarContraseña(){
+    const input000 = document.querySelector('#contraseña');
+    const contraseña00 = input000.value;
+    const expReg =/^\d+(\.\d+)?$/;
+    if(!expReg.test(contraseña00)){
+        contraseña00.classList.add('--error');
+    }
+}
+
+formulario.addEventListener('submit', function(e){
+    e.preventDefault();
+if(pais00.value ===''){
+    pais00.classList.add('rojo');
+}else{
+    pais00.classList.remove('rojo');
+    validarPais();
+    pais00.value='';
+} 
+});
+function validarPais(){
+    const input = document.querySelector('#pais');
+    const pais = input.value;
+}
+
+formulario.addEventListener('submit', function(e){
+    e.preventDefault();
+if(fecha00.value ===''){
+    mail00.classList.add('rojo');
+}else{
+    fecha00.classList.remove('rojo');
+    validarFecha();
+   fecha00.value='';
+}   
+});
+function validarFecha(){
+    const input000 = document.querySelector('#fecha');
+    const fecha00 = input000.value;
+    }
+
 
 
 formulario.addEventListener('submit', function(e){
     e.preventDefault();
-if(validarCorreo() && validarContraseña()){
+if(validarCorreo() && validarContraseña() && validarPais() && validarFecha()){
     const nuevoReg ={
       id: 1,
       fecha: new Date(),
       correo: mail00.value,
-      contraseña: mail00.value
+      contraseña: mail00.value,
+      pais: pais00.value,
+      fecha: fecha00.value
    };
    const registroPasajeros = JSON.parse(window.localStorage.getItem('cont'));
 
