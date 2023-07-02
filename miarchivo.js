@@ -58,10 +58,10 @@ select.addEventListener('change', ()=>{
     console.log('Seleccionaste: '+ opcionSeleccionada);
 })
 
-
+const formulario = document.querySelector('#formulario');
 const mail00 = document.querySelector('#mail');
 const contraseña00 =document.querySelector('#contraseña');
-const formulario = document.querySelector('#formulario');
+
 
 formulario.addEventListener('submit', function(evento){
     evento.preventDefault();
@@ -82,18 +82,6 @@ function validarCorreo(){
         input00.classList.add('--error');
     }
 }
-
-formulario.addEventListener('submit', function(evento){
-    evento.preventDefault();
-if(contraseña00.value ===''){
-    contraseña00.classList.add('rojo');
-}else{
-    contraseña00.classList.remove('rojo');
-    validarContraseña();
-    contraseña00.value='';
-}   
-});
-
 function validarContraseña(){
     const input000 = document.querySelector('#contraseña');
     const contraseña00 = input000.value;
@@ -103,9 +91,37 @@ function validarContraseña(){
     }
 }
 
+formulario.addEventListener('submit', function(evento){
+    evento.preventDefault();
+if(contraseña00.value ===''){
+    contraseña00.classList.add('rojo');
+}else{
+    contraseña00.classList.remove('rojo');
+    validarContraseña();
+    contraseña00.value='';
+} 
+});
 
 
 
+formulario.addEventListener('submit', function(evento){
+    evento.preventDefault();
+if(validarCorreo() && validarContraseña()){
+    const nuevoReg ={
+      id:'1',
+      fecha: new Date(),
+      correo: mail00.value,
+      contraseña: mail00.value
+   };
+   const registroPasajeros = JSON.parse(window.localStorage.getItem('cont'));
 
+   if(registroPasajeros){
+    const nuevosPasajeros = [...registroPasajeros, nuevoReg];
+    window.localStorage.setItem('cont', JSON.stringify(nuevosPasajeros));
 
-
+ }else{
+ 
+ window.localStorage.setItem('cont', JSON.stringify([{...nuevoReg}]));
+ }
+ } 
+});
