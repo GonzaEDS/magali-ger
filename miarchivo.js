@@ -104,11 +104,11 @@ if(contraseña00.value ===''){
 
 
 
-formulario.addEventListener('submit', function(evento){
-    evento.preventDefault();
+formulario.addEventListener('submit', function(e){
+    e.preventDefault();
 if(validarCorreo() && validarContraseña()){
     const nuevoReg ={
-      id:'1',
+      id: 1,
       fecha: new Date(),
       correo: mail00.value,
       contraseña: mail00.value
