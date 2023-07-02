@@ -8,7 +8,10 @@ function sumarTresValores(){
     alert('Ingrese solo valores validos');
  }
     let valor4 =prompt('Cantidad de mascotas ');
-   
+    if(valor4 >5){
+alert('No puede viajar con mas de 5 mascotas')
+    }
+    
  
 
      let resultado =parseInt(valor1)* parseInt(valor2)* parseInt(valor4);
@@ -17,6 +20,6 @@ function sumarTresValores(){
 
 var resultadoElemento= document.getElementById('h1');
 
-resultadoElemento.innerHTML = resultado;
+resultadoElemento.innerHTML ='$'+ resultado;
 }
 sumarTresValores();
