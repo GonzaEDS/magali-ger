@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  background: #eaeaea;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+form {
+  font-size: 15px;
+}
+
+input {
+  font-size: 18px;
+  padding: 10px;
+}
+
+select {
+  padding: 10px;
+  font-size: 20px;
+}
+
+button {
+  height: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: #998294;
+  border-color: rgb(105, 114, 119);
+  border-style: solid;
+  border-radius: 10px;
+  width: 420px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #95969b;
+}
+
+button#tryAgain {
+  width: auto;
+  padding: 1rem 1rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: medium;
+  font-weight: 600;
+  font-family: inherit;
+  color: #0000009c;
+}
+
+/* Custom Alert */
+
+.customPopup {
+  border: 2px solid #0000005c;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 8px;
+  color: #211f1fd4;
+  font-size: 18px;
+  text-align: center;
+  width: 80%;
+  font-weight: 600;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.customPopup .closeButton {
+  position: absolute;
+  align-self: flex-end;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 30px;
+  line-height: 0px;
+  right: 10px;
+  top: 18px;
+  transition: transform 0.2s cubic-bezier(0.03, 0.47, 1, 1);
+}
+.customPopup .closeButton:hover {
+  transform: scale(1.1);
+}
+
+.customPopup .buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
+.customPopup .btn {
+  font-size: 17px;
+  border: none;
+  color: #fceeee;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 45%;
+  border: 2px solid #2d2c2c54;
+  background: linear-gradient(45deg, #6d6d6d45, transparent);
+  transition: filter 0.2s ease-out;
+}
+
+.customPopup .btn:hover {
+  filter: drop-shadow(1px 1px 1px black);
+}
+
+.customPopup .acceptButton {
+  background-color: #4caf50;
+}
+
+.customPopup .cancelButton {
+  background-color: #fa7a71; /* red */
+}
+
+.customPopup.danger {
+  background-color: #fa7a71; /* red */
+}
+
+.customPopup.success {
+  background-color: #4caf50; /* green */
+}
+
+.customPopup.neutral {
+  background-color: #c1c1c1; /* grey for neutral */
+}
+
+.customPopup.confirm {
+  background-color: #b5afaf;
+  border: 2px solid #595656;
+}
+
+/* Custom prompt */
+.customPrompt {
+  background-color: #dad3d3;
+}
+.customPrompt input {
+  text-align: center;
+  width: 50%;
+  margin-top: 0.7rem;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid grey;
+}
+.customPrompt .customPopup-box div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
